@@ -118,3 +118,12 @@ st.pyplot(fig1)
 
 
 
+fig2, ax = plt.subplots(figsize = (10,6))
+df_rating = df['rating']
+
+df_rating.plot(kind="hist",bins=20,color="palevioletred",edgecolor="snow",density=True,label="hist",stacked=True)
+df_rating.plot(kind="kde",color="darkslateblue",label="distribution of rating")
+plt.xlabel('rating')
+plt.ylabel('total')
+plt.title('Anime Average Rating Distribution ')
+st.pyplot(fig2)
